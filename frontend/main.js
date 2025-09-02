@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const ORDER_API_BASE_URL = '_ORDER_API_URL_';
 
     // Product Service is named 'product-service-w04e2' and exposes port 8000 internally.
-    const PRODUCT_API_BASE_URL = 'http://4.254.66.107:8000';
+    //const PRODUCT_API_BASE_URL = 'http://4.254.66.107:8000';
     // Order Service is named 'order-service-w04e2' and exposes port 8001 internally.
-    const ORDER_API_BASE_URL = 'http://4.254.61.158:8001';
+    //const ORDER_API_BASE_URL = 'http://4.254.61.158:8001';
 
     // DOM Elements
     const messageBox = document.getElementById('message-box');
