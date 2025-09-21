@@ -144,10 +144,4 @@ jobs:
     - name: Logout from Azure
       run: az logout
       if: always()
-    # CI/CD Trigger
-    - name: Trigger backend-cd.yml (CD)
-        uses: ./.github/workflows/backend-cd.yml
-        with:
-          aks_cluster_name: sit722aks
-          aks_resource_group: sit722-group
-          acr_name: sit722acrmwc
+   
