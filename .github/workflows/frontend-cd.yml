@@ -61,7 +61,7 @@ jobs:
 
       # Login to Azure Container Registry (ACR)
       - name: Login to Azure Container Registry
-        run: az acr login --name ${{ secrets.AZURE_CONTAINER_REGISTRY }}
+        run: az acr login --name ${{ github.event.inputs.acr_name }}
 
       - name: Inject Backend IPs into Frontend main.js
         run: |
