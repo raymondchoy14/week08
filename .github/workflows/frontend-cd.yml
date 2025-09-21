@@ -23,10 +23,7 @@ on:
         description: 'Resource Group of the AKS Cluster'
         required: true
         default: 'sit722-group'
-      acr_name:
-        description: 'Name of Azure Container Registry (ACR)'
-        required: true
-        default: 'sit722acrmwc'
+    
 
   workflow_call:
     inputs:
@@ -42,9 +39,6 @@ on:
       aks_resource_group:
         required: true
         type: string
-      acr_name:
-      required: true
-      type: string
 
 jobs:
   deploy_frontend:
