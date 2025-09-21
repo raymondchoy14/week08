@@ -23,6 +23,10 @@ on:
         description: 'Resource Group of the AKS Cluster'
         required: true
         default: 'sit722-group'
+      acr_name:
+        description: 'Name of Azure Container Registry (ACR)'
+        required: true
+        default: 'sit722arcmwc'
     
 
   workflow_call:
@@ -74,8 +78,8 @@ jobs:
       # Build and Push Docker image for Frontend
       - name: Build and Push Frontend Image
         run: |
-          docker build -t ${{ secrets.AZURE_CONTAINER_REGISTRY }}/frontend:latest ./frontend/
-          docker push ${{ secrets.AZURE_CONTAINER_REGISTRY }}/frontend:latest
+          docker build -t ${{ inputs.acr_name }}.azurecr.io/frontend:latest ./frontend/
+          docker push ${{ inputs.acr_name }}.azurecr.io/frontend:latest
 
       - name: Set Kubernetes context (get AKS credentials)
         uses: azure/aks-set-context@v3
