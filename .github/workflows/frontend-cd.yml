@@ -26,7 +26,7 @@ on:
       acr_name:
         description: 'Name of Azure Container Registry (ACR)'
         required: true
-        default: 'sit722arcmwc'
+        default: 'sit722acrmwc'
 
   workflow_call:
     inputs:

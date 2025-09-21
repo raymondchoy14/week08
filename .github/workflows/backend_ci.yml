@@ -20,7 +20,7 @@ on:
 env:
   # ACR Login Server (e.g., myregistry.azurecr.io)
   # This needs to be set as a GitHub Repository Secret
-  ACR_LOGIN_SERVER: sit722arcmwc.azurecr.io
+  ACR_LOGIN_SERVER: sit722acrmwc.azurecr.io
   # Dynamically generate image tags based on Git SHA and GitHub Run ID
   # This provides unique, traceable tags for each image build
   IMAGE_TAG: ${{ github.sha }}-${{ github.run_id }}
@@ -150,4 +150,4 @@ jobs:
         with:
           aks_cluster_name: sit722aks
           aks_resource_group: sit722-group
-          acr_name: sit722arcmwc
+          acr_name: sit722acrmwc
